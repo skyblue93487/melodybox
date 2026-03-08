@@ -210,37 +210,6 @@ function editSong(id) {
     const song = songs.find(s => s.id === id);
     if (!song) return;
 
-    // フォームに値をセット
-    document.getElementById("title").value = song.title;
-    document.getElementById("artist").value = song.artist;
-    document.getElementById("tags").value = song.tags.join(",");
-    document.getElementById("url").value = song.url;
-    document.getElementById("status").value = song.status;
-
-    const saveBtn = document.getElementById("saveBtn");
-    saveBtn.textContent = "更新";
-
-    // 新規追加の関数は呼ばず、既存曲を更新するだけ
-    saveBtn.onclick = () => {
-        song.title = document.getElementById("title").value;
-        song.artist = document.getElementById("artist").value;
-        song.tags = document.getElementById("tags").value.split(",");
-        song.url = document.getElementById("url").value;
-        song.status = document.getElementById("status").value;
-
-        saveSongs(); // 上書き保存
-        render();    // 再描画
-
-        // ボタンを元に戻す
-        saveBtn.textContent = "保存";
-        saveBtn.onclick = saveNewSong; // 新規追加用に戻す
-    };
-}
-
-function editSong(id) {
-    const song = songs.find(s => s.id === id);
-    if (!song) return;
-
     editingId = id; // 編集中のIDをセット
     document.getElementById("title").value = song.title;
     document.getElementById("artist").value = song.artist;
@@ -440,4 +409,5 @@ document.addEventListener("click", (e) => {
             openCard.classList.remove("open");
         }
     });
+
 });
