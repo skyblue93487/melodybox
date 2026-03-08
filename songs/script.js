@@ -244,8 +244,7 @@ function saveNewSong() {
     render();
 }
 
-// 最初の保存ボタンは新規追加用に設定
-document.getElementById("saveBtn").onclick = saveNewSong;
+
 
 // ===== 検索 =====
 
@@ -411,3 +410,4 @@ document.addEventListener("click", (e) => {
     });
 
 });
+
