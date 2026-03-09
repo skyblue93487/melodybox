@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+        
+<title>MelodyBox</title>
+        
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+        
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" content="#e6f7ff">
+        
+</head>
+
+<body>
+
+<header>
+
+<button id="menuBtn">≡</button>
+<h1>MelodyBox</h1>
+
+</header>
+
+<nav id="menu">
+
+<button data-page="home">歌える曲</button>
+<button data-page="learn">覚える曲</button>
+<button data-page="fav">お気に入り</button>
+<button data-page="search">検索</button>
+<button data-page="add">曲追加</button>
+<button data-page="backup">バックアップ</button>
+
+</nav>
+
+<main>
+
+<!-- 歌える -->
+
+<section id="homePage" class="page">
+
+<h2>最近追加</h2>
+<div id="recentSongs"></div>
+
+<h2>歌える曲</h2>
+<div id="singList"></div>
+
+</section>
+
+
+<!-- 覚える -->
+
+<section id="learnPage" class="page hidden">
+
+<h2>覚える曲</h2>
+<div id="learnList"></div>
+
+</section>
+
+
+<!-- お気に入り -->
+
+<section id="favPage" class="page hidden">
+
+<h2>★お気に入り</h2>
+<div id="favList"></div>
+
+</section>
+
+
+<!-- 検索 -->
+
+<section id="searchPage" class="page hidden">
+
+<input id="searchBar" placeholder="曲名 / 歌手 検索">
+
+<h3>歌手</h3>
+<div id="artistList"></div>
+
+<h3>タグ</h3>
+<div id="tagList"></div>
+
+<h3>検索結果</h3>
+<div id="searchResults"></div>
+
+</section>
+
+
+<!-- 追加 / 編集 -->
+
+<section id="addPage" class="page hidden">
+
+<h2>曲追加 / 編集</h2>
+
+<input id="title" placeholder="曲名">
+
+<input id="artist" placeholder="歌手">
+
+<input id="tags" placeholder="タグ (カンマ区切り)">
+
+<input id="url" placeholder="URL">
+
+<select id="status">
+
+<option value="sing">歌える</option>
+<option value="learn">覚える</option>
+
+</select>
+
+<button id="saveBtn">保存</button>
+
+</section>
+
+
+<!-- バックアップ -->
+
+<section id="backupPage" class="page hidden">
+
+<h2>バックアップ</h2>
+
+<button id="backupBtn">バックアップ作成</button>
+
+<hr>
+
+<h3>復元</h3>
+
+<input type="file" id="restoreFile">
+
+</section>
+
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
