@@ -1,0 +1,207 @@
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans JP",sans-serif;
+background:white;
+color:#333;
+}
+
+header{
+display:flex;
+align-items:center;
+padding:12px;
+background:#e6f7ff;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+#menuBtn{
+font-size:26px;
+border:none;
+background:none;
+cursor:pointer;
+margin-right:10px;
+}
+
+h1{
+font-size:20px;
+margin:0;
+}
+
+nav{
+position:fixed;
+left:-220px;
+top:0;
+width:220px;
+height:100%;
+background:linear-gradient(#d9f2ff, #ffffff);;
+border-right:1px solid #eee;
+transition:0.25s;
+padding-top:60px;
+z-index:20;
+}
+
+nav.open{
+left:0;
+}
+
+nav button{
+display:block;
+width:100%;
+padding:14px;
+border:none;
+background:none;
+text-align:left;
+font-size:15px;
+color:#444;
+}
+
+nav button:hover{
+background:#f0f8ff;
+}
+
+main{
+padding:16px;
+}
+
+h2{
+margin-top:0;
+}
+
+.song{
+background:white;
+border:1px solid #eee;
+border-radius:10px;
+padding:12px;
+margin-bottom:10px;
+}
+
+.songTitle{
+font-weight:bold;
+font-size:16px;
+}
+
+.songArtist{
+font-size:14px;
+color:#666;
+}
+
+.star{
+color:#4db8ff;
+margin-left:6px;
+}
+
+.details{
+margin-top:10px;
+padding-top:10px;
+border-top:1px solid #eee;
+display:none;
+font-size:14px;
+}
+
+.tag{
+display:inline-block;
+background:#e6f6ff;
+color:#0077aa;
+padding:4px 10px;
+border-radius:12px;
+margin:3px;
+font-size:12px;
+}
+
+.details button{
+margin-top:6px;
+margin-right:6px;
+padding:6px 10px;
+border:none;
+border-radius:6px;
+background:#e6f6ff;
+}
+
+.details button:hover{
+background:#d5efff;
+}
+
+#recentSongs{
+display:flex;
+gap:8px;
+overflow-x:auto;
+padding-bottom:10px;
+}
+
+.recentItem{
+background:#e6f6ff;
+padding:8px 12px;
+border-radius:14px;
+white-space:nowrap;
+font-size:13px;
+}
+
+input,select{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:14px;
+}
+
+button{
+cursor:pointer;
+}
+
+.hidden{
+display:none;
+}
+
+#artistList button,
+#tagList button{
+margin:4px;
+padding:6px 10px;
+border:none;
+background:#e6f6ff;
+border-radius:12px;
+font-size:13px;
+}
+
+#artistList button:hover,
+#tagList button:hover{
+background:#d5efff;
+}
+
+#searchBar{
+margin-bottom:12px;
+}
+
+hr{
+margin:20px 0;
+border:none;
+border-top:1px solid #eee;
+}
+
+.songDetail {
+    display: none; /* 初期は非表示 */
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.song.open .songDetail{
+    display:block;
+}
+
+/* タイトルクリックでわかるようにカーソル */
+.songMain {
+    cursor: pointer;
+}
+  
+  /* タグデザイン */
+.tag {
+    display: inline-block;
+    background: #e6f6ff;
+    color: #0077aa;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin: 3px;
+    font-size: 12px;
+}
